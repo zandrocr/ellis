@@ -1,0 +1,33 @@
+services:
+  # Serviço da sua aplicação
+  app:
+    # Se você tem um Dockerfile, use 'build'.
+    # O '.' indica que o Dockerfile está no mesmo diretório que o docker-compose.yml.
+    build: .
+    # Se você estiver usando uma imagem pronta do Docker Hub, comente 'build' e use 'image'.
+    # image: 'sua-imagem-da-app:latest'
+    container_name: api
+    ports:
+      # Mapeia a porta 3000 do host para a porta 3000 do container.
+      # Altere conforme a porta que sua aplicação usa.
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no container para desenvolvimento com live-reloading.
+      # Para produção, você pode querer remover esta linha.
+      - .:/app
+      # Volume nomeado para pacotes/dependências (ex: node_modules), para não serem sobrescritos.
+      # - app_modules:/app/node_modules
+    # environment:
+      # Variáveis de ambiente para a sua aplicação.
+      # - PYTHONUNBUFFERED=1
+      # - NODE_ENV=development
+      # - DATABASE_URL=postgres://user:password@db:5432/mydatabase
+      # - REDIS_URL=redis://cache:6379
+    # networks:
+      # - app-network
+    # depends_on:
+      # Garante que os serviços de banco de dados e cache iniciem antes da sua aplicação.
+      # - db
+      # - cache
+    # restart: unless-stopped
+
