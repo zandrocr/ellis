@@ -44,7 +44,7 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 
 6. **Acesse a documentação interativa:**
 
-   Abra o navegador e acesse:  
+   Abra o navegador e acesse:
    [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
    Aqui você pode testar todos os endpoints da API de forma interativa.
@@ -66,3 +66,5 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+
+palavras-chave: MARVEL, 
