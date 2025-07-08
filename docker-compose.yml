@@ -6,11 +6,11 @@ services:
     build: .
     # Se você estiver usando uma imagem pronta do Docker Hub, comente 'build' e use 'image'.
     # image: 'sua-imagem-da-app:latest'
-    container_name: api
     ports:
       # Mapeia a porta 3000 do host para a porta 3000 do container.
       # Altere conforme a porta que sua aplicação usa.
       - "8000:8000"
+    container_name: api
     volumes:
       # Monta o diretório atual no container para desenvolvimento com live-reloading.
       # Para produção, você pode querer remover esta linha.
